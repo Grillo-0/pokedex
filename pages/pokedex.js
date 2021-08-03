@@ -1,8 +1,11 @@
 import React from 'react'
+import { TextField, ImageList } from '@material-ui/core'
 
 function Pokedex(){
     return(
-        <div>pagina da pokedex</div>
+      <div>
+            <TextField id="Pokémon" label="Pokémon" variant="outlined" autoFocus={true} style={{marginTop:"80px", display:"flex"}}/>
+        </div>
     )
 };
 
