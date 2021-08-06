@@ -1,5 +1,4 @@
 const Pokemon = ({pokemon}) => {
-    console.log(pokemon.sprites.front_default)
     return(
         <div>
         <h1>pagina do pokemon {pokemon.name}</h1>
