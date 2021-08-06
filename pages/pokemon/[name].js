@@ -1,12 +1,36 @@
-import { useRouter } from 'next/router'
-
-const Pokemon = () => {
-    const router = useRouter()
-    const { name } = router.query
-
+const Pokemon = ({pokemon}) => {
+    console.log(pokemon.sprites.front_default)
     return(
-        <div>pagina do pokemon {name}</div>
+        <div>
+        <h1>pagina do pokemon {pokemon.name}</h1>
+        <img src={pokemon.sprites.front_default} alt="Pokemon front sprite" layout='fill' />
+        </div>
     )
 };
+
+export async function getStaticPaths() {
+    const countRes = await fetch('https://pokeapi.co/api/v2/pokemon/')
+    const countData = await countRes.json()
+    const count = countData.count
+
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${count}/`);
+    const data = await res.json();
+    
+    const paths = data.results.map((pokemon) => ({
+        params: {name : pokemon.name},
+    }))
+
+    return{paths,fallback: false}
+}
+
+export async function getStaticProps({params}){
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.name}`)
+    const pokemon = await res.json()
+
+    return{
+        props: {pokemon}
+    }
+}
+
 
 export default Pokemon
