@@ -1,7 +1,6 @@
 import useSWR from 'swr'
  
 const fetcher = (url) => fetch(url).then((res) => res.json())
- 
 const API_URL = 'https://pokeapi.co/api/v2/pokemon'
 const PAGE_LIMIT = 100
  

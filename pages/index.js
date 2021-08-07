@@ -1,7 +1,7 @@
 // index.js
  
-import useFetchPokemon from '../api/useRequest'
-import Pokemon from '../components/pokemon'
+import useFetchPokemon from './api/useRequest'
+import Pokemon from './components/pokemon'
  
 export default function IndexPage() {
   const { result, error } = useFetchPokemon()
