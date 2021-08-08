@@ -1,8 +1,9 @@
 const Pokemon = ({pokemon}) => {
     return(
         <div>
-        <h1>pagina do pokemon {pokemon.name}</h1>
+        <h1>pagina do pokemon {pokemon.name} com o id {pokemon.id}</h1>
         <img src={pokemon.sprites.front_default} alt="Pokemon front sprite" layout='fill' />
+        <img src={pokemon.sprites.back_default} alt="Pokemon back sprite" layout='fill' />
         </div>
     )
 };
