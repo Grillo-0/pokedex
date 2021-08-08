@@ -1,6 +1,6 @@
 
 import React from 'react'
-import useFetchPokemon from '../api/useRequest'
+import useFetchPokemon from '../pages/api/useRequest'
 
 export default function Pokemon({ pokemon }) {
   const { name } = pokemon
