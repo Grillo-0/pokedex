@@ -11,21 +11,19 @@ export default function IndexPage() {
     <main className='App'>
       <header className={classe.header}>
         <img
-          className='iconeImg'
+          className={classe.iconeImg}
           src="Icone.png"
           alt="Icone"
         />
 
         <img
-          className='pokedexImg'
+          className={classe.pokedexImg}
           src="PokéDex.png"
           alt="PokéDex"
-          width="500"
-          height="600"
         />
       </header>
 
-      <div>
+      <div className='pokemonContainer'>
         {result.results.map((pokemon) => (
           <Pokemon pokemon={pokemon} key={pokemon.name} />
         ))}
