@@ -3,7 +3,7 @@ import Pokemon from '../components/pokemonCard'
 import classe from '../styles/Header.module.css'
 import { TextField } from '@material-ui/core'
 import { useState, useEffect } from 'react'
-import theme from '../styles/theme'
+import Link from 'next/link'
 
 export default function IndexPage() {
   const { result, error } = useFetchPokemon()
@@ -38,12 +38,17 @@ export default function IndexPage() {
         />
       </header>
       <div className='searchBar'>
-          <TextField  id="Pokémon" label="Pokémon" variant="outlined" autoFocus={true} value={value} onChange={filterSearch}/>  
+          <TextField  id="Pokémon" label="Pokémon" variant="outlined" autoFocus={true} value={value} onChange={filterSearch} style={{width:"90%"}}/>  
       </div>  
       <div className='pokemonContainer'>
-        {searchResults.map((pokemon) => (
-          <Pokemon pokemon={pokemon} key={pokemon.name} />
-        ))}
+        {searchResults.map((pokemon) => {
+            console.log(pokemon.name)
+            return (
+                <Link href = {`/${pokemon.name}`}>
+                   <a><Pokemon pokemon={pokemon} key={pokemon.name} /></a>
+                </Link>
+            )
+        })}
       </div>
     </main>
   )

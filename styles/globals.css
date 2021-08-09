@@ -29,6 +29,9 @@ body {
   align-items: center;
 }
 
+.pokemonContainer * {
+    text-decoration: none;
+}
 .Card {
   width: 12rem auto;
   background: #39A2AE;
@@ -61,7 +64,7 @@ body {
 .Card--name {
   text-transform: capitalize;
   color: rgb(255, 255, 255);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
  
@@ -71,7 +74,7 @@ body {
   margin: auto;
 }
  
-.Card--details {
-  font-size: 1.3rem;
-  color: #e4c439;
+.Card--details>img {
+  margin-top: 7px;
+  width: 25px;
 }
