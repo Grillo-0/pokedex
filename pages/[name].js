@@ -4,6 +4,9 @@ const Pokemon = ({pokemon}) => {
         <h1>pagina do pokemon {pokemon.name} com o id {pokemon.id}</h1>
         <img src={pokemon.sprites.front_default} alt="Pokemon front sprite" layout='fill' />
         <img src={pokemon.sprites.back_default} alt="Pokemon back sprite" layout='fill' />
+      <span className='Card--details'>
+        {pokemon.types.map((poke) => poke.type.name).join(', ')}
+      </span>
         </div>
     )
 };

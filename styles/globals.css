@@ -32,11 +32,8 @@ body {
 .Card {
   width: 12rem auto;
   background: #39A2AE;
-  color: #e4c439;
   padding: 1rem;
   border-radius: 10px;
-  border-top: 0.5px solid #e4c439;
-  border-bottom: 0.5px solid #e4c439;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
@@ -50,13 +47,13 @@ body {
 }
  
 .Card--id {
-  background: #e4c439;
+  background: #F26157;
   width: 3rem;
   color: #fff;
   padding: 0.1rem;
   font-weight: 700;
   position: absolute;
-  border-radius: 0 0 10px 0;
+  border-radius: 0 0 9.5px 0;
   top: 0;
   left: 0;
 }
