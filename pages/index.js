@@ -1,6 +1,6 @@
 import useFetchPokemon from './api/useRequest'
+import Header from '../components/header'
 import Pokemon from '../components/pokemonCard'
-import classe from '../styles/Header.module.css'
 import { TextField } from '@material-ui/core'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -24,19 +24,7 @@ export default function IndexPage() {
 
   return (
     <main className='App'>
-      <header className={classe.header}>
-        <img
-          className={classe.iconeImg}
-          src="Icone.png"
-          alt="Icone"
-        />
-
-        <img
-          className={classe.pokedexImg}
-          src="PokéDex.png"
-          alt="PokéDex"
-        />
-      </header>
+      <Header/>
       <div className='searchBar'>
           <TextField  id="Pokémon" label="Pokémon" variant="outlined" autoFocus={true} value={value} onChange={filterSearch} style={{width:"90%"}}/>  
       </div>  
