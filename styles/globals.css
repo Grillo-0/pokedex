@@ -89,9 +89,21 @@ body {
 }
 
 .PokeNameTag>img {
-    width: 250px;
+    width: 150px;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
+}
+
+.NameType {
+    position: absolute;
+    left: 0px;
+    padding: 20px;
+}
+
+#pokeid {
+    position: absolute;
+    right: 0px;
+    padding: 20px;
 }
