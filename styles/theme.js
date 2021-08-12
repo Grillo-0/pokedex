@@ -8,7 +8,8 @@ const theme = createTheme({
         secondary: {
             main: '#39A2AE'
         }
-    }
+    },
+    shadows: ['none']
 })
 
 theme.overrides= {
@@ -16,6 +17,14 @@ theme.overrides= {
         root: {
             margin: theme.spacing(5,0,0),
             width: '90%',
+        }
+    },
+    MuiTabs: {
+        root: {
+        },
+        indicator: {
+            background: '#fff',
+            height: '4px'
         }
     }
 }

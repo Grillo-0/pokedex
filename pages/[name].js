@@ -1,6 +1,17 @@
 import Header from '../components/header'
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import React from 'react';
+import TabPanel from '../components/tabPanel';
+
 
 const Pokemon = ({pokemon}) => {
+    const [value, setValue] = React.useState(1);
+
+    const selectTab = (event,NewValue) => {
+        setValue(NewValue)
+    }
     return(
         <main className="App">
             <Header/>
@@ -15,39 +26,34 @@ const Pokemon = ({pokemon}) => {
                 <img src={pokemon.sprites.front_default} alt="Pokemon front sprite" layout='fill' />
             </div>
             <div className = "pokemonDescription">
-            <h3>Pokemon's Info:</h3>
-            <br />
-            
-            <p>
-            </p>
-            <br />
-
-            <p>
-                <b>Abilities:</b>
-                <ul>
-                {pokemon.abilities.map( ability => {
-                    return (<li>{ability.ability.name}</li>)
-                })}
-                </ul>
-            </p>
-            <br />
-
-            <p>
-                <b>Stats: </b>
-                <ul>
+        <AppBar position="static">
+          <Tabs value={value} onChange={selectTab} aria-label="simple tabs example">
+            <Tab label="Status"/>
+            <Tab label="Info"/>
+            <Tab label="Games"/>
+            <Tab label="Abilities"/>
+          </Tabs>
+        </AppBar>
+            <TabPanel value={value} index={0}>
                 {pokemon.stats.map( stat => {
-                    return (<li>{stat.stat.name}: {stat.base_stat}</li>)
+                    return (<h4>{stat.stat.name}: {stat.base_stat}</h4>)
                 })}
-                </ul>
-            </p>
-            <br />
-
-            <p>
-                <b>Games: </b>
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+                <h3>height:{(pokemon.height/10).toPrecision(2)}m</h3>
+                <h3>weight:{(pokemon.weight*0.1).toPrecision(2)}kg</h3>
+                <h3>Base experience:{(pokemon.base_experience).toPrecision(2)}Xp</h3>
+            </TabPanel>
+            <TabPanel value={value} index={2}>
                 {pokemon.game_indices.map( (game, index) => {
                     return (<span>{index ? ', ' : ''} {game.version.name}</span>)
                 })}
-            </p>
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+                {pokemon.abilities.map( ability => {
+                    return (<h3>{ability.ability.name}</h3>)
+                })}
+            </TabPanel>
             </div>
         </main>
     )

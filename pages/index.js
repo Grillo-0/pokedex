@@ -17,22 +17,20 @@ export default function IndexPage() {
   let value;
   
   const filterSearch = (evt) => {
-      let aux = result.results.filter(pokemon => pokemon.name.includes(evt.target.value))
+      let aux = result.results.filter(pokemon => pokemon.name.includes(evt.target.value.toLowerCase()))
       setSearchResults(aux)
-      console.log(searchResults)
   }
 
   return (
     <main className='App'>
-      <Header/>
+      <Header key="header"/>
       <div className='searchBar'>
           <TextField label="Pokémon" variant="outlined" value={value} onChange={filterSearch}/>  
       </div>  
       <div className='pokemonContainer'>
         {searchResults.map((pokemon) => {
-            console.log(pokemon.name)
             return (
-                <Link href = {`/${pokemon.name}`}>
+                <Link href = {`/${pokemon.name}`} key={`${pokemon.name}link`}>
                    <a><Pokemon pokemon={pokemon} key={pokemon.name} /></a>
                 </Link>
             )
