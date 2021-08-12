@@ -26,7 +26,7 @@ export default function IndexPage() {
     <main className='App'>
       <Header/>
       <div className='searchBar'>
-          <TextField  id="Pokémon" label="Pokémon" variant="outlined" autoFocus={true} value={value} onChange={filterSearch} style={{width:"90%"}}/>  
+          <TextField label="Pokémon" variant="outlined" value={value} onChange={filterSearch}/>  
       </div>  
       <div className='pokemonContainer'>
         {searchResults.map((pokemon) => {

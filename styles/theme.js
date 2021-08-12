@@ -11,4 +11,12 @@ const theme = createTheme({
     }
 })
 
+theme.overrides= {
+    MuiTextField: {
+        root: {
+            margin: theme.spacing(5,0,0),
+            width: '90%',
+        }
+    }
+}
 export default theme

@@ -4,12 +4,14 @@
     background-color : #39A2AE;
     box-sizing: border-box;
     object-fit: contain;
-    margin-bottom: 68px;
     padding: 32px;
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 2;
+    position: relative;
 }
 
 .pokedexImg {
