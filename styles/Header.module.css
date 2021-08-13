@@ -15,6 +15,7 @@
 }
 
 .pokedexImg {
+    position:inherit;
     display: block;
     height: 100%;
     max-height: 121px;
@@ -22,8 +23,10 @@
 }
 
 .iconeImg {
+    position:inherit;
     display: block;
     height: 100%;
     max-height: 121px;
     margin: auto;
+    transform: rotate(14.05deg);
 }

@@ -20,8 +20,8 @@ body {
 }
 
 .pokemonContainer {
-  padding: 1rem;
-  margin: 2rem 0;
+  padding: 2rem;
+  
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-gap: 1.5rem;
@@ -32,8 +32,8 @@ body {
 .pokemonContainer * {
     text-decoration: none;
 }
+
 .Card {
-  width: 12rem auto;
   background: #39A2AE;
   padding: 1rem;
   border-radius: 10px;
@@ -51,10 +51,10 @@ body {
  
 .Card--id {
   background: #F26157;
-  width: 3rem;
   color: #fff;
-  padding: 0.1rem;
+  padding: 0.2rem;
   font-weight: 700;
+  min-width: 3rem;
   position: absolute;
   border-radius: 0 0 9.5px 0;
   top: 0;
@@ -64,7 +64,7 @@ body {
 .Card--name {
   text-transform: capitalize;
   color: rgb(255, 255, 255);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
  
@@ -89,6 +89,7 @@ body {
 }
 
 .PokeNameTag>img {
+    margin: 5px;
     width: 150px;
     image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
