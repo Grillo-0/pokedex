@@ -23,6 +23,9 @@ export default function IndexPage() {
 
   return (
     <main className='App'>
+      <head>
+          <title>Pokedex</title>
+      </head>
       <Header key="header"/>
       <div className='searchBar'>
           <TextField label="Pokémon" variant="outlined" value={value} onChange={filterSearch}/>  

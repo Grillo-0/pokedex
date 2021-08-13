@@ -14,6 +14,9 @@ const Pokemon = ({pokemon}) => {
     }
     return(
         <main className="App">
+            <head>
+                 <title>{pokemon.name[0].toUpperCase()+pokemon.name.substring(1)}</title>
+            </head>
             <Header/>
             <div className="PokeNameTag">
                 <div  className="NameType">
