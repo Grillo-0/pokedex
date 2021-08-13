@@ -31,7 +31,7 @@ export default function IndexPage() {
           <TextField label="Pokémon" variant="outlined" value={value} onChange={filterSearch}/>  
       </div>  
       <div className='pokemonContainer'>
-        {searchResults.map((pokemon) => {
+        {searchResults.slice(0,200).map((pokemon) => {
             return (
                 <Link href = {`/${pokemon.name}`} key={`${pokemon.name}link`}>
                    <a><Pokemon pokemon={pokemon} key={pokemon.name} /></a>
