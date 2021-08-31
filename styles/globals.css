@@ -66,6 +66,7 @@ body {
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   font-weight: 700;
+  
 }
  
 .Card--image {
@@ -79,7 +80,7 @@ body {
 }
  
 .Card--details>img {
-  margin-top: 7px;
+  margin-top: 10px;
   width: 25px;
 }
 

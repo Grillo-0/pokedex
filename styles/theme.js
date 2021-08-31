@@ -16,7 +16,7 @@ theme.overrides= {
     MuiTextField: {
         root: {
             margin: theme.spacing(5,0,0),
-            width: '90%',
+            width: '92%',
         }
     },
     MuiTabs: {
